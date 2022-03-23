@@ -1,0 +1,32 @@
+package UNIDAD6;
+
+import java.io.*;
+import b15460.*;
+
+public class Productos
+{
+	private int clv, exi;
+	private String nom, fec, archivo="Productos.txt";
+	private double pre;
+	private DataOutputStream obo;
+	private DataInputStream obi;
+	private Datos obd=new Datos();
+	
+	public void Registro()
+	{
+		System.out.println("Escribe los datos del producto");
+		clv=obd.Entero("Clave...");
+		nom=obd.Cadena("Nombre...");
+		exi=obd.Entero("Existencia...");
+		pre=obd.Double("Precio...");
+		fec=obd.Cadena("Fecha...");
+		try
+		{
+			obo=new DataOutputStream(new FileOutputStream(archivo))
+		}
+		catch()
+		{
+			
+		}
+	}
+}
